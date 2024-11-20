@@ -1,15 +1,19 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { Store } from 'redux';
+import { AppAction } from '../types/redux/action_types';
 import { RootState } from '../types/redux/root_state';
 import { initialRootState } from './initial_state';
-import rootReducerWithLoader from './reducers';
+import { pageSettingsReducer } from './page/reducers';
 import { ThunkArguments } from './thunk_arguments';
-import { AppAction } from './types';
 
 const thunkArgs: ThunkArguments = {};
 
+const reducer = {
+    pageSettingsState: pageSettingsReducer
+};
+
 const storeConfigured: Store<RootState, AppAction> = configureStore({
-    reducer: rootReducerWithLoader,
+    reducer,
     preloadedState: initialRootState,
     middleware: getDefaultMiddleware =>
         getDefaultMiddleware({

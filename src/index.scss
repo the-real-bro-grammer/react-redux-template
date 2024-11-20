@@ -1,0 +1,30 @@
+// Functions
+@import '~bootstrap/scss/_functions';
+@import './assets/scss/utils/_functions.scss';
+
+// Variables
+@import './assets/scss/user-variables';
+@import './assets/scss/utils/variables';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/variables-dark';
+
+// Maps
+@import './assets/scss/utils/maps';
+@import '~bootstrap/scss/maps';
+
+// Mixins
+@import '~bootstrap/scss/mixins';
+@import './assets/scss/utils/mixins';
+
+// Utilities
+@import './assets/scss/utils/utilities';
+@import '~bootstrap/scss/utilities';
+
+// Root
+@import '~bootstrap/scss/root';
+@import './assets/scss/theme/root/root';
+
+@import './assets/scss/bootstrap';
+
+@import './assets/scss/theme/theme';
+@import './assets/scss/components/components';
